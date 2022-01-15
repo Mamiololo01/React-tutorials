@@ -56,3 +56,20 @@ const Message = () => {
 };
 
 ReactDom.render(<Message/>, document.getElementById('root'));
+
+// Adding div to content //
+
+import React from 'react';
+import ReactDom from 'react-dom';
+
+
+function Message () {
+ return (<div>Hello world!</div>
+ 
+ );
+
+ };
+
+
+ReactDom.render(<Message/>, document.getElementById('root'));
+
