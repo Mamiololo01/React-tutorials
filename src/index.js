@@ -39,3 +39,20 @@ function Message () {
 }
 
 ReactDom.render(<Message/>, document.getElementById('root'));
+
+// Use JSX to add content instead of HTML//
+
+import React from 'react';
+import ReactDom from 'react-dom';
+
+
+//function Message () {
+// return <h1>Y2022 is my year, everything will be fine!!</h1>;
+
+// }
+
+const Message = () => {
+  return React.createElement('h2', {}, 'Y2022 is my year, everything will be fine!!');
+};
+
+ReactDom.render(<Message/>, document.getElementById('root'));
