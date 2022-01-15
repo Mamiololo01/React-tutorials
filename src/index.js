@@ -15,3 +15,16 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+// To add h2 tag on ReactJs //
+import React from 'react';
+import ReactDom from 'react-dom'
+
+
+function Greeting () {
+  return <h2>This is my first component!</h2>;
+
+}
+
+ReactDom.render(<Greeting/>, document.getElementById('root'));
