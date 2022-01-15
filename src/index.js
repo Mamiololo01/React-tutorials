@@ -28,3 +28,14 @@ function Greeting () {
 }
 
 ReactDom.render(<Greeting/>, document.getElementById('root'));
+
+import React from 'react';
+import ReactDom from 'react-dom'
+
+
+function Message () {
+  return <h2>Y2022 is my year, everything will be fine!!</h2>;
+
+}
+
+ReactDom.render(<Message/>, document.getElementById('root'));
