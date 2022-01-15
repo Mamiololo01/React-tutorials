@@ -152,7 +152,7 @@ function Message () {
      </li>
    </ul>
    
-   </>
+   </div>
  
  );
 
