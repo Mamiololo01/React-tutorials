@@ -70,6 +70,28 @@ function Message () {
 
  };
 
+ReactDom.render(<Message/>, document.getElementById('root'));
+
+// Adding more contents under div //
+
+import React from 'react';
+import ReactDom from 'react-dom';
+
+
+function Message () {
+ return (<div>
+   <h1>ARE YOU READY</h1>
+   <ul>
+     <li>
+       <a href='#'>Link HERE</a>
+     </li>
+   </ul>
+   
+   </div>
+ 
+ );
+
+ };
 
 ReactDom.render(<Message/>, document.getElementById('root'));
 
