@@ -161,3 +161,24 @@ function Message () {
 
 ReactDom.render(<Message/>, document.getElementById('root'));
 
+// Nested component //
+import React from 'react';
+import ReactDom from 'react-dom';
+
+
+function Message () {
+ return (<div>
+    <Talk/>
+   <p>Almost over!</p>
+   
+   </div>
+ 
+ );
+
+ };
+
+ const Talk = () => <h1>ARE YOU READY</h1>
+
+
+ReactDom.render(<Message/>, document.getElementById('root'));
+
