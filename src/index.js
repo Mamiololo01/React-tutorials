@@ -95,3 +95,22 @@ function Message () {
 
 ReactDom.render(<Message/>, document.getElementById('root'));
 
+// Replace div with React.Fragment //
+function Message () {
+ return (<React.Fragment>
+   <h1>ARE YOU READY</h1>
+   <ul>
+     <li>
+       <a href='#'>Link HERE</a>
+     </li>
+   </ul>
+   
+   </React.Fragment>
+ 
+ );
+
+ };
+
+
+ReactDom.render(<Message/>, document.getElementById('root'));
+
