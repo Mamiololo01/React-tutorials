@@ -321,3 +321,41 @@ const Book = (props) => {
 };
 
 ReactDom.render(<BookList/>, document.getElementById('root'));
+
+//Props and console part 2//
+mport React from 'react';
+import ReactDom from 'react-dom';
+
+// CSS
+import './index.css';
+
+//Setup vars
+const author = 'James Clear';
+const title = 'Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones';
+const img = 'https://images-na.ssl-images-amazon.com/images/I/91-EIJiYneL._AC_UL200_SR200,200_.jpg';
+
+
+function BookList () {
+ return ( 
+ <section className='booknet'>
+   <Book job='developer'/>
+   <Book title='random title' number={44}/>
+ </section>
+ );
+
+}
+
+const Book = (props) => {
+  return <article className='netbook'>
+<img src={img} alt=''/>
+<h1>{title}</h1>
+<h2>{author}</h2>
+<p>{props.job}</p>
+<p>{props.title}</p>
+<p>{props.number}</p>
+</article>
+
+
+};
+
+ReactDom.render(<BookList/>, document.getElementById('root'));
