@@ -207,3 +207,35 @@ const Book = () => {
 
 ReactDom.render(<BookList/>, document.getElementById('root'));
 
+// Book App //
+import React from 'react';
+import ReactDom from 'react-dom';
+
+
+function BookList () {
+ return ( 
+ <section>
+   <Book/>
+   <Book/>
+   <Book/>
+ </section>
+ );
+
+}
+
+const Book = () => {
+  return <article>
+    <Image></Image>
+    <Title />
+    <Author />
+  </article>;
+};
+
+const Image = () => <img src='https://images-na.ssl-images-amazon.com/images/I/91-EIJiYneL._AC_UL200_SR200,200_.jpg' alt=''/>
+
+const Title = () => <h1>Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones</h1>;
+
+const Author = () => <p>James Clear</p>;
+
+ReactDom.render(<BookList/>, document.getElementById('root'));
+
