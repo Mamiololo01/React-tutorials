@@ -284,3 +284,40 @@ p{
     padding: 1rem 2rem;
 }
 
+
+// Props with console on Nested components //
+import React from 'react';
+import ReactDom from 'react-dom';
+
+// CSS
+import './index.css';
+
+//Setup vars
+const author = 'James Clear';
+const title = 'Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones';
+const img = 'https://images-na.ssl-images-amazon.com/images/I/91-EIJiYneL._AC_UL200_SR200,200_.jpg';
+
+
+function BookList () {
+ return ( 
+ <section className='booknet'>
+   <Book job='developer'/>
+   <Book title='randon title' number={44}/>
+ </section>
+ );
+
+}
+
+const Book = (props) => {
+  console.log(props);
+  return <article className='netbook'>
+<img src={img} alt=''/>
+<h1>{title}</h1>
+<p>{author}</p>
+{console.log(props)}
+
+</article>
+
+};
+
+ReactDom.render(<BookList/>, document.getElementById('root'));
