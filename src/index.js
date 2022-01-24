@@ -405,3 +405,49 @@ const Book = (props) => {
 };
 
 ReactDom.render(<BookList/>, document.getElementById('root'));
+
+// MAP METHOD //
+import React from 'react';
+import ReactDom from 'react-dom';
+
+// CSS
+import './index.css';
+const books = [
+
+ {
+  img: 'https://images-na.ssl-images-amazon.com/images/I/91-EIJiYneL._AC_UL200_SR200,200_.jpg',
+  title: 'Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones',
+  author: 'James Clear',
+
+ },
+
+{
+  img: 'https://images-na.ssl-images-amazon.com/images/I/51WWHYPinjL._SX321_BO1,204,203,200_.jpg',
+  title: 'The Seven Husbands of Evelyn Hugo',
+  author: 'Taylor Jenkins',
+},
+
+];
+
+function BookList () {
+ return <section className='booknet'>{books.map((book) => {
+   const {img, title, author} = book;
+   return <div>
+     <h3>{title}</h3>
+     <h6>{author}</h6>
+   </div>
+ })}</section>;
+
+}
+
+const Book = (props) => {
+  const {img, title, author } = props;
+
+  return <article className='netbook'>
+
+</article>
+
+
+};
+
+ReactDom.render(<BookList/>, document.getElementById('root'));
