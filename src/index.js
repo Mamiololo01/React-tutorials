@@ -211,10 +211,13 @@ ReactDom.render(<BookList/>, document.getElementById('root'));
 import React from 'react';
 import ReactDom from 'react-dom';
 
+// CSS
+import './index.css';
+
 
 function BookList () {
  return ( 
- <section>
+ <section className='booknet'>
    <Book/>
    <Book/>
    <Book/>
@@ -224,7 +227,7 @@ function BookList () {
 }
 
 const Book = () => {
-  return <article>
+  return <article className='netbook'>
     <Image></Image>
     <Title />
     <Author />
@@ -238,4 +241,46 @@ const Title = () => <h1>Atomic Habits: An Easy & Proven Way to Build Good Habits
 const Author = () => <p>James Clear</p>;
 
 ReactDom.render(<BookList/>, document.getElementById('root'));
+
+// CSS style  //
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background: chartreuse;
+    color: black;
+}
+
+h1{
+    color: brown;
+}
+
+p{
+    color: cornflowerblue;
+}
+
+.booknet{
+    width: 90vw;
+    max-width: 1170px;
+    margin: 5rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+@media screen and (min-width:768px) {
+    .booknet{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+.netbook{
+    background: cornsilk;
+    border-radius: 1px solid black;
+    padding: 1rem 2rem;
+}
 
