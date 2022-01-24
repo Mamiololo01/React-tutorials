@@ -182,3 +182,28 @@ function Message () {
 
 ReactDom.render(<Message/>, document.getElementById('root'));
 
+// Nested component //
+
+import React from 'react';
+import ReactDom from 'react-dom';
+
+
+function BookList () {
+ return ( 
+ <section>
+   <Book/>
+   <Book/>
+   <Book/>
+   <Book/>
+   <Book/>
+ </section>
+ );
+
+}
+
+const Book = () => {
+  return <article>this is a train</article>;
+};
+
+ReactDom.render(<BookList/>, document.getElementById('root'));
+
