@@ -604,3 +604,62 @@ const Book = (props) => {
 };
 
 ReactDom.render(<BookList/>, document.getElementById('root'));
+
+// EXport in ReactJs by creating another folder //
+
+mport React from 'react';
+import ReactDom from 'react-dom';
+
+// CSS
+import './index.css';
+
+import {books} from './books';
+
+function BookList () {
+ return <section className='booknet'>{books.map((book) => {
+   const {img, title, author} = book;
+   return <Book book={book}></Book>;
+ })}
+ </section>
+
+}
+
+const Book = (props) => {
+  const {img, title, author } = props.book;
+  // attribute, eventHandler
+  // onClick, onMouseOver
+  const clickHandler = () => {
+    alert ('My first event');
+  };
+
+  return <article className='book' onMouseOver={() =>{
+    console.log('Welcome to my page')
+  }}>
+    <img src={img} alt='' />
+    <h1>{title}</h1>
+    <h3>{author}</h3>
+    <button type='button' onClick={clickHandler}>Reference example</button>
+
+</article>
+
+};
+
+ReactDom.render(<BookList/>, document.getElementById('root'));
+
+/*----------------------*/
+export const books = [
+
+    {
+     img: 'https://images-na.ssl-images-amazon.com/images/I/91-EIJiYneL._AC_UL200_SR200,200_.jpg',
+     title: 'Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones',
+     author: 'James Clear',
+   
+    },
+   
+   {
+     img: 'https://images-na.ssl-images-amazon.com/images/I/51WWHYPinjL._SX321_BO1,204,203,200_.jpg',
+     title: 'The Seven Husbands of Evelyn Hugo',
+     author: 'Taylor Jenkins',
+   },
+   
+   ];
