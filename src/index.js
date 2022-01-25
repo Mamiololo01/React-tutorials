@@ -663,3 +663,50 @@ export const books = [
    },
    
    ];
+
+// Export part 2 //
+import React from 'react';
+import ReactDom from 'react-dom';
+
+// CSS
+import './index.css';
+
+import {books} from './books';
+import Book from './Book';
+
+function BookList () {
+ return <section className='booknet'>{books.map((book) => {
+   const {img, title, author} = book;
+   return <Book book={book}></Book>;
+ })}
+ </section>
+
+}
+
+
+ReactDom.render(<BookList/>, document.getElementById('root'));
+
+/*-----------Export from Book.js----------*/
+import React from 'react';
+
+const Book = (props) => {
+    const {img, title, author } = props.book;
+    // attribute, eventHandler
+    // onClick, onMouseOver
+    const clickHandler = () => {
+      alert ('My first event');
+    };
+  
+    return <article className='book' onMouseOver={() =>{
+      console.log('Welcome to my page')
+    }}>
+      <img src={img} alt='' />
+      <h1>{title}</h1>
+      <h3>{author}</h3>
+      <button type='button' onClick={clickHandler}>Reference example</button>
+  
+  </article>
+  
+  };
+
+export default Book
